@@ -83,7 +83,8 @@ class SunshineOrder extends SunshineSingleton {
 		$items_html = apply_filters( 'sunshine_before_order_receipt_items', $items_html, $order_id, $order_items );
 		$items_html .= '<div class="order-items"><h3 style="font-size: 14px;">' . __('Cart Items','sunshine') . '</h3>';
 		$items_html .= ' <table border="0" cellspacing="0" cellpadding="0" width="100%">';
-		$items_html .= ' <tr><th style="'.$th_style.'">'.__( 'Image','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Comentarios','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Quantity','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Cost','sunshine' ).'</th></tr>';
+		// $items_html .= ' <tr><th style="'.$th_style.'">'.__( 'Image','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Comentarios','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Quantity','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Cost','sunshine' ).'</th></tr>';
+		$items_html .= ' <tr><th style="'.$th_style.'">'.__( 'Image','sunshine' ).'</th><th style="'.$th_style.'">'.__( 'Comentarios','sunshine' ).'</th></tr>';
 
 		foreach ( $order_items as $key => $order_item ) {
 
@@ -92,28 +93,28 @@ class SunshineOrder extends SunshineSingleton {
 			$image_html = '<img src="'. $thumb[0].'" alt="" width="75" />';
 			$items_html .= ' <td style="'.$td_style.'">'.apply_filters( 'sunshine_order_image_html', $image_html, $order_item, $thumb ).'</td>';
 			$items_html .= ' <td style="'.$td_style.'">' . apply_filters( 'sunshine_order_line_item_comments', $order_item['comments'], $order_id, $order_item ).'</td>';
-			$items_html .= ' <td style="'.$td_style.'">' . $order_item['qty'] . '</td>';
-			if ( !empty( $order_item['price_with_tax'] ) ) {
-				$items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['price_with_tax'], false, true ) . '</td>';
-			} else {
-				$items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['price'], false, true ) . '</td>';
-			}
-			if ( !empty( $order_item['total_with_tax'] ) ) {
-				$items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['total_with_tax'], false ) . '</small></td>';
-			} else {
-				$items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['total'], false, true ) . '</td>';
-			}
+			// $items_html .= ' <td style="'.$td_style.'">' . $order_item['qty'] . '</td>';
+			// if ( !empty( $order_item['price_with_tax'] ) ) {
+				// $items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['price_with_tax'], false, true ) . '</td>';
+			// } else {
+				// $items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['price'], false, true ) . '</td>';
+			// }
+			// if ( !empty( $order_item['total_with_tax'] ) ) {
+				// $items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['total_with_tax'], false ) . '</small></td>';
+			// } else {
+				// $items_html .= ' <td style="'.$td_style.'">' . sunshine_money_format( $order_item['total'], false, true ) . '</td>';
+			// }
 			$items_html .= ' </tr>';
 
 		}
 
 		$td_style .= ' font-weight: bold;';
 		$th_style = 'padding: 0 20px 5px 0; text-align: left; font-size: 12px;';
-		if ( $data['subtotal_with_tax'] ) {
-			$items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; border-top: 2px solid #CCC;">' . __('Subtotal', 'sunshine') . '</td><td style="'.$td_style.' border-top: 2px solid #CCC;">'.sunshine_money_format( $data['subtotal_with_tax'], false ) . '</td></tr>';
-		} else {
-			$items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; border-top: 2px solid #CCC;">' . __('Subtotal', 'sunshine') . '</td><td style="'.$td_style.' border-top: 2px solid #CCC;">'.sunshine_money_format( $data['subtotal'], false ).'</td></tr>';
-		}
+		// if ( $data['subtotal_with_tax'] ) {
+			// $items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; border-top: 2px solid #CCC;">' . __('Subtotal', 'sunshine') . '</td><td style="'.$td_style.' border-top: 2px solid #CCC;">'.sunshine_money_format( $data['subtotal_with_tax'], false ) . '</td></tr>';
+		// } else {
+			// $items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; border-top: 2px solid #CCC;">' . __('Subtotal', 'sunshine') . '</td><td style="'.$td_style.' border-top: 2px solid #CCC;">'.sunshine_money_format( $data['subtotal'], false ).'</td></tr>';
+		// }
 /* 		if ( $data['tax_shipping'] ) {
 			$items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right;">' . __('Shipping', 'sunshine') . ' ('.sunshine_get_shipping_method_name( $data['shipping_method'] ).')</td><td style="'.$td_style.'">'.sunshine_money_format( $data['shipping_cost'], false ).'</td></tr>';
 		} else {
@@ -128,11 +129,11 @@ class SunshineOrder extends SunshineSingleton {
 		if ( $data['credits'] ) {
 			$items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right;">' . __('Credits', 'sunshine') . '</td><td style="'.$td_style.'">-'.sunshine_money_format( $data['credits'], false, true ).'</td></tr>';
 		}
-		if ( $sunshine->options['display_price'] == 'with_tax' ) {
-			$items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; font-size: 16px;">' . __('Total', 'sunshine') . '</td><td style="'.$td_style.' font-size: 16px;">'.sunshine_money_format( $data['total'], false ) . '</td></tr>';
-		} else {
-			$items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; font-size: 16px;">' . __('Total', 'sunshine') . '</td><td style="'.$td_style.' font-size: 16px;">'.sunshine_money_format( $data['total'], false, true ) . '</td></tr>';
-		}
+		// if ( $sunshine->options['display_price'] == 'with_tax' ) {
+			// $items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; font-size: 16px;">' . __('Total', 'sunshine') . '</td><td style="'.$td_style.' font-size: 16px;">'.sunshine_money_format( $data['total'], false ) . '</td></tr>';
+		// } else {
+			// $items_html .= ' <tr><td colspan="4" style="'.$td_style.' text-align: right; font-size: 16px;">' . __('Total', 'sunshine') . '</td><td style="'.$td_style.' font-size: 16px;">'.sunshine_money_format( $data['total'], false, true ) . '</td></tr>';
+		// }
 		$items_html .= ' </table></div>';
 
 		$customer_info = '<br /><br /><table border="0" cellspacing="0" cellpadding="0"><tr>';
