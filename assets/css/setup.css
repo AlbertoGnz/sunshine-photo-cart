@@ -1,0 +1,48 @@
+body {
+	margin: 65px auto 24px;
+	box-shadow: none;
+	background: #f1f1f1;
+	padding: 0;
+}
+h1 {
+	border: 0;
+	margin: 0 0 24px;
+	padding: 0;
+	text-align: center;
+}
+h1 img {
+    max-width: 30%;
+}
+
+.sunshine-setup {
+	text-align: center;
+}
+
+.sunshine-setup-steps{ padding:0 0 24px;margin:0;list-style:none outside;overflow:hidden;color:#ccc;width:100%;display:-webkit-inline-box;display:inline-flex}
+.sunshine-setup-steps li{width:100%;float:left;padding:0 0 .8em;margin:0;text-align:center;position:relative;border-bottom:4px solid #ccc;line-height:1.4em}
+.sunshine-setup-steps li a{color:#d8a528;text-decoration:none;padding:1.5em;margin:-1.5em;position:relative;z-index:1}
+.sunshine-setup-steps li a:focus,
+.sunshine-setup-steps li a:hover{color:#111;text-decoration:underline}
+.sunshine-setup-steps li::before{content:'';border:4px solid #ccc;border-radius:100%;width:4px;height:4px;position:absolute;bottom:0;left:50%;margin-left:-6px;margin-bottom:-8px;background:#fff}
+.sunshine-setup-steps li.active{border-color:#d8a528;color:#d8a528;font-weight:700}
+.sunshine-setup-steps li.active::before{border-color:#d8a528}
+.sunshine-setup-steps li.done{border-color:#d8a528;color:#d8a528}
+.sunshine-setup-steps li.done::before{border-color:#d8a528;background:#d8a528}
+
+.sunshine-setup-content {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	padding: 2em;
+	margin: 0 0 20px;
+	background: #fff;
+	overflow: hidden;
+	zoom: 1;
+	text-align: left;
+}
+
+.sunshine-setup-content a { font-weight: bold; color: #d8a528; }
+.sunshine-setup-content input[type="text"] { width: 97%; padding: 5px; }
+
+
+.sunshine-setup-actions { clear: both; text-align: center; }
+button.sunshine-setup-button { border: 2px solid #d8a528; padding: 10px 30px; border-radius: 75px; text-transform: uppercase; color: #d8a528; font-size: 16px; font-weight: bold; }
+button.sunshine-setup-button:hover { background: #d8a528; color: #FFF; }
