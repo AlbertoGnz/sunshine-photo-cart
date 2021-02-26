@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sunshine Photo Cart\n"
 "POT-Creation-Date: 2018-04-27 22:17-0600\n"
-"PO-Revision-Date: 2019-01-05 12:58+0100\n"
+"PO-Revision-Date: 2021-02-26 19:34+0100\n"
 "Last-Translator: Derek Ashauer <derek@ashwebstudio.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/wp-translations/sunshine-photo-cart/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -186,7 +186,7 @@ msgstr "Datos de productos populares han sido restablecidos."
 
 #: sunshine-analytics/analytics.php:678
 msgid "Gallery sales data has been reset"
-msgstr "Datos de vetnas de galerias han sido restablecidos."
+msgstr "Datos de ventas de galerías han sido restablecidos"
 
 #: sunshine-analytics/analytics.php:696
 msgid "Popular images data has been reset"
@@ -660,7 +660,7 @@ msgstr "Acceder a galería con email"
 #: sunshine-campaign-monitor/campaign-monitor.php:288 sunshine-mailchimp/mailchimp.php:271 sunshine-photo-cart/classes/sunshine.class.php:459 sunshine-photo-cart/sunshine-options.php:240 sunshine-photo-cart/sunshine-options.php:361
 #: sunshine-photo-cart/themes/2013/checkout.php:3 sunshine-photo-cart/themes/default/checkout.php:3
 msgid "Checkout"
-msgstr "Terminar y pagar"
+msgstr "Terminar"
 
 #: sunshine-digital-downloads/digital-downloads.php:62
 msgid "Downloadable"
@@ -4736,7 +4736,7 @@ msgstr "Regístrese"
 
 #: sunshine-photo-cart/classes/frontend.class.php:468 sunshine-photo-cart/classes/frontend.class.php:479
 msgid "Return to"
-msgstr "Volver a "
+msgstr "Volver a galería completa"
 
 #: sunshine-photo-cart/classes/frontend.class.php:547
 #, php-format
@@ -5431,7 +5431,7 @@ msgstr "Cuenta actualizada"
 
 #: sunshine-photo-cart/sunshine-functions.php:1239
 msgid "Sorry, no galleries matched that password."
-msgstr ""
+msgstr "No hemos encontrado tu galería. Necesitamos unos días para preparar todo después de tu sesión. Si pasados 3 días aún tienes problemas, contáctanos."
 
 #: sunshine-photo-cart/sunshine-functions.php:1269
 msgid "Not a valid email address"
@@ -6144,7 +6144,7 @@ msgstr ""
 
 #: sunshine-photo-cart/sunshine-template-functions.php:805 sunshine-photo-cart/themes/theme/image.php:7
 msgid "Previous"
-msgstr "previo"
+msgstr "Anterior"
 
 #: sunshine-photo-cart/sunshine-template-functions.php:813 sunshine-photo-cart/themes/theme/image.php:8
 msgid "Next"
@@ -6173,7 +6173,7 @@ msgstr "Comentarios"
 #: sunshine-photo-cart/sunshine-template-functions.php:954
 #, php-format
 msgid "You have %s characters left"
-msgstr "Quedan %s carácteres "
+msgstr "Quedan %s carácteres"
 
 #: sunshine-photo-cart/sunshine-template-functions.php:1106
 #, php-format
@@ -6246,7 +6246,7 @@ msgstr ""
 #: sunshine-photo-cart/sunshine-template-functions.php:1851
 #, php-format
 msgid "Return to gallery \"%s\""
-msgstr "Volver al álbum"
+msgstr "Volver al álbum \"%s\""
 
 #: sunshine-photo-cart/sunshine-widgets.php:14
 msgid "Display a gallery password box"
@@ -6303,7 +6303,7 @@ msgstr "No tiene imágenes marcadas como favorito"
 
 #: sunshine-photo-cart/themes/2013/functions.php:5 sunshine-photo-cart/themes/default/functions.php:4
 msgid "Functionality"
-msgstr "."
+msgstr "Funcionalidades"
 
 #: sunshine-photo-cart/themes/2013/functions.php:7 sunshine-photo-cart/themes/default/functions.php:6
 msgid "Gallery Password Box"

@@ -471,7 +471,7 @@ class SunshineFrontend extends SunshineSingleton {
 			if ( SunshineFrontend::$current_gallery->post_parent != 0 ) { // If sub gallery
 				$menu[10] = array(
 					'icon' => 'undo',
-					'name' => __( 'Return to','sunshine' ) . ' ' . get_the_title( SunshineFrontend::$current_gallery->post_parent ),
+					'name' => __( 'Return to','sunshine' ),
 					'url' => get_permalink( SunshineFrontend::$current_gallery->post_parent ),
 				);
 			}
@@ -482,7 +482,7 @@ class SunshineFrontend extends SunshineSingleton {
 			if ( SunshineFrontend::$current_image->post_parent != 0 ) {
 				$menu[10] = array(
 					'icon' => 'undo',
-					'name' => __( 'Return to','sunshine' ) . ' ' . get_the_title( SunshineFrontend::$current_image->post_parent ),
+					'name' => __( 'Return to','sunshine' ),
 					'url' => get_permalink( SunshineFrontend::$current_image->post_parent ),
 				);
 			}
