@@ -55,7 +55,6 @@ $status = sunshine_get_order_status(SunshineFrontend::$current_order->ID);
 			<tr>
 				<th class="sunshine-cart-image"><?php _e('Image','sunshine'); ?></th>
 				<th class="sunshine-cart-name"><?php _e('Product','sunshine'); ?></th>
-				<th class="sunshine-cart-qty"><?php _e('Qty','sunshine'); ?></th>
 			</tr>
 			<?php
 			$i = 1; foreach ($order_items as $item) {
@@ -71,9 +70,7 @@ $status = sunshine_get_order_status(SunshineFrontend::$current_order->ID);
 					<td class="sunshine-cart-item-name">
 						<div class="sunshine-item-comments"><?php echo apply_filters('sunshine_order_line_item_comments', $item['comments'], SunshineFrontend::$current_order->ID, $item); ?></div>
 					</td>
-					<td class="sunshine-cart-item-qty">
-						<?php echo $item['qty']; ?>
-					</td>
+
 				</tr>
 
 			<?php $i++; } ?>

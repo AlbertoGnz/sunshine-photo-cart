@@ -30,7 +30,6 @@
 						<div class="sunshine-item-comments"><?php echo apply_filters('sunshine_cart_item_comments', $item['comments'], $item); ?></div>
 					</td>
 					<td class="sunshine-cart-item-qty" data-label="<?php _e('Qty', 'sunshine'); ?>">
-						<input type="number" name="item[<?php echo $i; ?>][qty]" class="sunshine-qty" value="<?php echo $item['qty']; ?>" size="4" tabindex="<?php echo $tabindex; ?>" min="0" />
 						<a href="?delete_cart_item=<?php echo $item['hash']; ?>&nonce=<?php echo wp_create_nonce( 'sunshine_delete_cart_item' ); ?>"><?php _e('Remove','sunshine'); ?></a>
 					</td>
 				</tr>

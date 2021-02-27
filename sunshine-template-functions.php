@@ -1459,8 +1459,6 @@ function sunshine_checkout_order_review() {
 			<tr>
 				<th class="sunshine-cart-image"><?php _e('Image', 'sunshine'); ?></th>
 				<th class="sunshine-cart-name"><?php _e('Product', 'sunshine'); ?></th>
-				<th class="sunshine-cart-qty"><?php _e('Qty', 'sunshine'); ?></th>
-
 			</tr>
 			<?php $i = 1; $tabindex = 0; foreach (sunshine_cart_items() as $item) { $tabindex++; ?>
 				<tr class="sunshine-cart-item <?php sunshine_product_class($item['product_id']); ?>">
@@ -1473,9 +1471,6 @@ function sunshine_checkout_order_review() {
 					</td>
 					<td class="sunshine-cart-item-name" data-label="<?php _e('Product', 'sunshine'); ?>">
 						<div class="sunshine-item-comments"><?php echo apply_filters('sunshine_cart_item_comments', $item['comments'], $item); ?></div>
-					</td>
-					<td class="sunshine-cart-item-qty" data-label="<?php _e('Qty', 'sunshine'); ?>">
-						<?php echo $item['qty']; ?>
 					</td>
 				</tr>
 
