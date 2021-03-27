@@ -439,10 +439,10 @@ class SunshineFrontend extends SunshineSingleton {
 		}
 
 		if ( !$sunshine->options['proofing'] ) {
-			$cart_count = '';
+			// $cart_count = '';
 
-			if ( !empty( $sunshine->cart->content ) )
-				$cart_count = '<span class="sunshine-count sunshine-cart-count">'.$sunshine->cart->item_count.'</span>';
+			// if ( !empty( $sunshine->cart->content ) )
+				// $cart_count = '<span class="sunshine-count sunshine-cart-count">'.$sunshine->cart->item_count.'</span>';
 
 			$menu[40] = array(
 				'name' => get_the_title( $sunshine->options['page_cart'] ),

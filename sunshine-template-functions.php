@@ -974,6 +974,7 @@ function sunshine_add_to_cart_form() {
 				}
 				</script>
 				<h2><?php _e( 'Comments', 'sunshine' ); ?></h2>
+				Nº de copias, alguna cosa se necesite retocar…
 				<textarea name="sunshine_comments" rows="5" cols="20" onKeyDown="limitText(this.form.sunshine_comments,this.form.countdown,200);" onKeyUp="limitText(this.form.sunshine_comments,this.form.countdown,200);"></textarea>
 				<br /><?php echo sprintf( __( 'You have %s characters left','sunshine' ), '<input readonly type="text" class="sunshine-countdown" name="countdown" size="3" value="200" />' ); ?>
 			</li>
