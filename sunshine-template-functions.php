@@ -1470,7 +1470,7 @@ function sunshine_checkout_order_review() {
 						echo apply_filters('sunshine_cart_image_html', $image_html, $item, $thumb);
 						?>
 					</td>
-					<td class="sunshine-cart-item-name" data-label="<?php _e('Product', 'sunshine'); ?>">
+					<td class="sunshine-cart-item-name">
 						<div class="sunshine-item-comments"><?php echo apply_filters('sunshine_cart_item_comments', $item['comments'], $item); ?></div>
 					</td>
 				</tr>
@@ -1786,7 +1786,7 @@ function sunshine_cart_return() {
 	if ( SunshineSession::instance()->last_gallery && $title = get_the_title( SunshineSession::instance()->last_gallery ) ) {
 ?>
 	<div id="sunshine-cart-return">
-		<a href="<?php echo get_permalink( SunshineSession::instance()->last_gallery ); ?>"><?php echo sprintf( __( 'Return to gallery "%s"', 'sunshine' ), $title ); ?></a>
+		<a href="<?php echo get_permalink( SunshineSession::instance()->last_gallery ); ?>">Volver a galería completa</a>
 	</div>
 <?php
 	}
