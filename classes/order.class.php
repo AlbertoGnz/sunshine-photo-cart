@@ -189,7 +189,7 @@ class SunshineOrder extends SunshineSingleton {
 		if ( $data['shipping_last_name'] )
 			$customer_info .=  '<br><b>Recordatorios: </b>'.$data['shipping_last_name'];
 		if ( $data['shipping_address2'] )
-			$customer_info .= '<br><b>Comentario comuniones: </b>'.$data['shipping_address2'];
+			$customer_info .= '<br><b>Otros: </b>'.$data['shipping_address2'];
 		$customer_info .=  '<br><br>'; 
 
 

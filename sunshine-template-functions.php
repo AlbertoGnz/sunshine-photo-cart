@@ -1343,13 +1343,13 @@ function sunshine_checkout_shipping_fields() {
 			<div class="field"><b>Indicándonos </b><label>si es un álbum (analógico o digital), si es un pack de fotos sueltas….<?php echo ( $required['first_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_first_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_first_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['last_name'] ) { ?>
-			<div class="field"><b>Pedidos con recordatorios: </b><label>Indicanos si llevan nombre, nombre y fecha, o nada.<?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
+			<div class="field"><b>Pedidos con recordatorios: </b><label><br> - Escribe cantidad y modelo<br> - Indicanos si llevan nombre, nombre y fecha, o nada.<br> (Si no quieres recordatorios, pon 0) <?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['address'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'Address', 'sunshine' ); ?><?php echo ( $required['address'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['address2'] ) { ?>
-			<div class="field"><b>Comuniones: </b><label>Indicar la fecha de la comunión, modelo de álbum, materiales, Nº foto para portada del álbum y caja (álbum digital) <?php echo ( $required['address2'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address2" rows="5" cols="20" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address2' ) ); ?>" /></label></div>
+			<div class="field"><b>Comuniones: </b><label>Indicar la fecha de la comunión, modelo de álbum, materiales, Nº foto para portada del álbum y caja (álbum digital)</label><br><b>Bautizos: </b><label>Modelo de album (digital o analogico), fecha del bautizo. Si es digital indicar foto de portada y caja elegida.</label><br><b>Otros: </b><label>Escribe 0.</label><?php echo ( $required['address2'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address2" rows="5" cols="20" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address2' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['city'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'City', 'sunshine' ); ?><?php echo ( $required['city'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_city" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_city' ) ); ?>" /></label></div>
