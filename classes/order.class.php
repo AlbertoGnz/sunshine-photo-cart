@@ -183,7 +183,14 @@ class SunshineOrder extends SunshineSingleton {
 		
 		$customer_info .=  '<br>'.join( ', ', $image_file_list ); 
 		$customer_info .=  '<br><br>'; 
-
+		
+		if ( $data['shipping_first_name'] )
+			$customer_info .= '<b>Producto: </b>'.$data['shipping_first_name'];
+		if ( $data['shipping_last_name'] )
+			$customer_info .=  '<br><b>Recordatorios: </b>'.$data['shipping_last_name'];
+		if ( $data['shipping_address2'] )
+			$customer_info .= '<br><b>Comentario comuniones: </b>'.$data['shipping_address2'];
+		$customer_info .=  '<br><br>'; 
 
 
 		$search = array( '[message]', '[items]', '[customer_info]', '[order_id]', '[order_url]', '[first_name]', '[last_name]', '[notes]' );

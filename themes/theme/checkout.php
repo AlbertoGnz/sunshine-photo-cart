@@ -17,9 +17,7 @@
 				<li id="sunshine-checkout-step-shipping-methods">
 					<?php sunshine_checkout_shipping_methods(); ?>
 				</li>
-				<li id="sunshine-checkout-step-shipping">
-					<?php sunshine_checkout_shipping_fields(); ?>
-				</li>
+
 				<li id="sunshine-checkout-step-billing">
 					<?php sunshine_checkout_billing_fields(); ?>
 				</li>
@@ -28,6 +26,9 @@
 				</li>
 				<li id="sunshine-checkout-step-payment-methods">
 					<?php sunshine_checkout_payment_methods(); ?>
+				</li>
+				<li id="sunshine-checkout-step-shipping">
+					<?php sunshine_checkout_shipping_fields(); ?>
 				</li>
 				<?php do_action( 'sunshine_after_checkout_steps' ); ?>
 			</ol>

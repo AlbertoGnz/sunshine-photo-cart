@@ -1340,16 +1340,16 @@ function sunshine_checkout_shipping_fields() {
 			<div class="field field-left"><label><?php _e( 'Country', 'sunshine' ); ?><?php echo ( $required['country'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><?php SunshineCountries::country_only_dropdown( 'shipping_country', SunshineUser::get_user_meta( 'shipping_country' ) ); ?></label></div>
 		<?php } ?>
 		<?php if ( $fields['first_name'] ) { ?>
-			<div class="field field-left"><label><?php _e( 'First Name', 'sunshine' ); ?><?php echo ( $required['first_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_first_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_first_name' ) ); ?>" /></label></div>
+			<div class="field"><b>Indicándonos </b><label>si es un álbum (analógico o digital), si es un pack de fotos sueltas….<?php echo ( $required['first_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_first_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_first_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['last_name'] ) { ?>
-			<div class="field field-right"><label><?php _e( 'Last Name', 'sunshine' ); ?><?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
+			<div class="field"><b>Pedidos con recordatorios: </b><label>Indicanos si llevan nombre, nombre y fecha, o nada.<?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['address'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'Address', 'sunshine' ); ?><?php echo ( $required['address'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['address2'] ) { ?>
-			<div class="field field-left"><label><?php _e( 'Address 2', 'sunshine' ); ?><?php echo ( $required['address2'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><textarea name="shipping_address2" rows="5" cols="20" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address2' ) ); ?>" /></textarea></label></div>
+			<div class="field"><b>Comuniones: </b><label>Indicar la fecha de la comunión, modelo de álbum, materiales, Nº foto para portada del álbum y caja (álbum digital) <?php echo ( $required['address2'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address2" rows="5" cols="20" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address2' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['city'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'City', 'sunshine' ); ?><?php echo ( $required['city'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_city" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_city' ) ); ?>" /></label></div>
@@ -1457,10 +1457,6 @@ function sunshine_checkout_order_review() {
 		<h2><?php _e( 'Order Summary', 'sunshine' ); ?></h2>
 		<div id="sunshine-order-review-cart" style="display:;">
 			<table id="sunshine-cart-items">
-			<tr>
-				<th class="sunshine-cart-image"><?php _e('Image', 'sunshine'); ?></th>
-				<th class="sunshine-cart-name"><?php _e('Product', 'sunshine'); ?></th>
-			</tr>
 			<?php $i = 1; $tabindex = 0; foreach (sunshine_cart_items() as $item) { $tabindex++; ?>
 				<tr class="sunshine-cart-item <?php sunshine_product_class($item['product_id']); ?>">
 					<td class="sunshine-cart-item-image" data-label="<?php _e('Image', 'sunshine'); ?>">

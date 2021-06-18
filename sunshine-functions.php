@@ -771,10 +771,6 @@ function sunshine_notes_checkout_fields() {
 	<li id="sunshine-checkout-step-notes">
 		<fieldset id="sunshine-notes">
 			<h2><?php _e( 'Additional Order Notes', 'sunshine' ); ?><?php echo ( $fields_required['notes'] ) ? '<span class="required">*</span>' : ''; ?></h2>
-			<b>Indicándonos</b> si es un álbum (analógico o digital), si es un pack de fotos sueltas…<br>
-			<b>Pedidos con recordatorios:</b> Indicanos si llevan nombre, nombre y fecha, o nada.<br>
-			<b>Comuniones:</b> Indicar la fecha de la comunión, modelo de álbum, materiales, Nº foto para portada del álbum y caja (álbum digital)
-
 			<textarea name="notes"><?php echo ( isset( $_POST['notes'] ) ? htmlspecialchars( $_POST['notes'] ) : '' ); ?></textarea>
 		</fieldset>
 	</li>

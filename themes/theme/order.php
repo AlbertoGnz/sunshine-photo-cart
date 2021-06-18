@@ -36,16 +36,16 @@ $status = sunshine_get_order_status(SunshineFrontend::$current_order->ID);
 			</div>
 			<?php if ( $order_data['shipping_first_name'] ) { ?>
 				<div id="sunshine-order-shipping-fields">
-					<h2><?php _e('Shipping Information','sunshine'); ?></h2>
-					<div class="field field-left"><label><?php _e('First Name','sunshine'); ?></label> <?php echo $order_data['shipping_first_name']; ?></div>
-					<div class="field field-right"><label><?php _e('Last Name','sunshine'); ?></label> <?php echo $order_data['shipping_last_name']; ?></div>
-					<div class="field field-left"><label><?php _e('Address','sunshine'); ?></label> <?php echo $order_data['shipping_address']; ?></div>
-					<div class="field field-right"><label><?php _e('Address 2','sunshine'); ?>	</label> <?php echo $order_data['shipping_address2']; ?></div>
-					<div class="field field-left"><label><?php _e('City','sunshine'); ?></label> <?php echo $order_data['shipping_city']; ?></div>
+					<h2>Comentarios</h2>
+					<div class="field"><label>Producto</label> <?php echo $order_data['shipping_first_name']; ?></div>
+					<div class="field"><label>Recordatorio: </label> <?php echo $order_data['shipping_last_name']; ?></div>
+					<!-- <div class="field field-left"><label><?php _e('Address','sunshine'); ?></label> <?php echo $order_data['shipping_address']; ?></div> -->
+					<div class="field"><label>Comentario comuniones: </label> <?php echo $order_data['shipping_address2']; ?></div>
+<!-- 					<div class="field field-left"><label><?php _e('City','sunshine'); ?></label> <?php echo $order_data['shipping_city']; ?></div>
 					<div class="field field-right"><label><?php _e('State / Province','sunshine'); ?></label> <?php echo ( isset( SunshineCountries::$states[$order_data['shipping_country']][$order_data['shipping_state']] ) ) ? SunshineCountries::$states[$order_data['shipping_country']][$order_data['shipping_state']] : $order_data['shipping_state']; ?></div>
 					<div class="field field-left"><label><?php _e('Zip / Postcode','sunshine'); ?></label> <?php echo $order_data['shipping_zip']; ?></div>
 					<div class="field field-right"><label><?php _e('Country','sunshine'); ?></label> <?php echo SunshineCountries::$countries[$order_data['shipping_country']]; ?></div>
-				</div>
+-->				</div>
 			<?php } ?>
 		</div>
 		<div id="sunshine-order-cart-items">
