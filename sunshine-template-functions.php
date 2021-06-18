@@ -973,11 +973,11 @@ function sunshine_add_to_cart_form() {
 					}
 				}
 				</script>
-				<h2><?php _e( 'Comments', 'sunshine' ); ?></h2>
-				Nº de copias, alguna cosa se necesite retocar…
-				<textarea name="sunshine_comments" rows="5" cols="20" onKeyDown="limitText(this.form.sunshine_comments,this.form.countdown,200);" onKeyUp="limitText(this.form.sunshine_comments,this.form.countdown,200);"></textarea>
-				<br /><?php echo sprintf( __( 'You have %s characters left','sunshine' ), '<input readonly type="text" class="sunshine-countdown" name="countdown" size="3" value="200" />' ); ?>
-			</li>
+				<h2>Recuerda escribir comentarios</h2>
+				
+				<textarea name="sunshine_comments" placeholder="Nº de copias, alguna cosa se necesite retocar…" rows="5" cols="20" onKeyDown="limitText(this.form.sunshine_comments,this.form.countdown,200);" onKeyUp="limitText(this.form.sunshine_comments,this.form.countdown,200);"></textarea>
+<!-- 				<br /><?php echo sprintf( __( 'You have %s characters left','sunshine' ), '<input readonly type="text" class="sunshine-countdown" name="countdown" size="3" value="200" />' ); ?>
+ -->			</li>
 			<li id="sunshine-add-button" style="display:">
 				<input type="submit" value="<?php _e( 'Add to Cart','sunshine' ); ?>" class="sunshine-button" />
 				<input type="hidden" name="sunshine_add_to_cart" value="1" />
@@ -1343,7 +1343,7 @@ function sunshine_checkout_shipping_fields() {
 			<div class="field"><b>Indicándonos </b><label>si es un álbum (analógico o digital), si es un pack de fotos sueltas….<?php echo ( $required['first_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_first_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_first_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['last_name'] ) { ?>
-			<div class="field"><b>Pedidos con recordatorios: </b><label><br> - Escribe cantidad y modelo<br> - Indicanos si llevan nombre, nombre y fecha, o nada.<br> (Si no quieres recordatorios, pon 0) <?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
+			<div class="field"><b>Pedidos con recordatorios: </b><label><br> - Escribe cantidad y modelo<br> - Indicanos si llevan nombre, nombre y fecha, o nada.<br> (Si no quieres recordatorios, escribe 0) <?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['address'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'Address', 'sunshine' ); ?><?php echo ( $required['address'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address' ) ); ?>" /></label></div>
