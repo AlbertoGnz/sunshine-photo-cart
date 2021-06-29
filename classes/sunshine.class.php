@@ -321,9 +321,7 @@ class Sunshine {
 		$messages = '';
 		if ( $this->has_errors() ) {
 			$messages = '<div id="sunshine-errors" class="sunshine-messages"><ul>';
-			foreach ( $this->errors as $error ) {
-				$messages .= '<li>'.$error.'</li>';
-			}
+			$messages .= '<li>HAY CAMPOS OBLIGATORIOS SIN RELLENAR. REVISA QUE ESTEN TODOS RELLENOS</li>';
 			$messages .= '</ul></div>';
 		}
 		if ( $this->has_messages() ) {

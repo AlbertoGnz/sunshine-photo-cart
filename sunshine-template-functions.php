@@ -1272,6 +1272,7 @@ function sunshine_checkout_billing_fields() {
 	</script>
 	<fieldset id="sunshine-billing-fields">
 	<div id="sunshine-billing-fields-use">
+		
 		<?php if ( $fields['country'] ) { ?>
 			<div class="field field-left" id="sunshine-billing-country"><label><?php _e( 'Country', 'sunshine' ); ?><?php echo ( $required['country'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><?php SunshineCountries::country_only_dropdown( 'country', SunshineUser::get_user_meta( 'country' ) ); ?></label></div>
 		<?php } ?>
@@ -1336,6 +1337,7 @@ function sunshine_checkout_shipping_fields() {
 	});
 	</script>
 	<fieldset id="sunshine-shipping-fields">
+		<text style="color:red; font-weight: bold;">Recuerda rellenar todos los campos*</text>		
 		<?php if ( $fields['country'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'Country', 'sunshine' ); ?><?php echo ( $required['country'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><?php SunshineCountries::country_only_dropdown( 'shipping_country', SunshineUser::get_user_meta( 'shipping_country' ) ); ?></label></div>
 		<?php } ?>
@@ -1343,7 +1345,7 @@ function sunshine_checkout_shipping_fields() {
 			<div class="field"><b>Indicándonos </b><label>si es un álbum (analógico o digital), si es un pack de fotos sueltas….<?php echo ( $required['first_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_first_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_first_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['last_name'] ) { ?>
-			<div class="field"><b>Pedidos con recordatorios: </b><label><br> - Escribe cantidad y modelo<br> - Indicanos si llevan nombre, nombre y fecha, o nada.<br> (Si no quieres recordatorios, escribe 0) <?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
+			<div class="field"><b>Pedidos con recordatorios: </b><label><br>(Si no quieres recordatorios, escribe 0)<br> - Escribe cantidad y modelo<br> - Indicanos si llevan nombre, nombre y fecha, o nada.<?php echo ( $required['last_name'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_last_name" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_last_name' ) ); ?>" /></label></div>
 		<?php } ?>
 		<?php if ( $fields['address'] ) { ?>
 			<div class="field field-left"><label><?php _e( 'Address', 'sunshine' ); ?><?php echo ( $required['address'] == 1 ) ? '<span class="required">*</span> ' : ''; ?><input type="text" name="shipping_address" value="<?php echo esc_attr( SunshineUser::get_user_meta( 'shipping_address' ) ); ?>" /></label></div>
